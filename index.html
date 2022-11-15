@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursoPrework</title>
+</head>
+<body>
+    <h1>cursoPrework</h1>
+    <h3>Paso uno: Instalar VS Code</h3>
+    <p>Instalar extenciones necesarias.</p>
+    <ul>
+        <li>WSL </li>
+        <li>Auto Rename Tag</li>
+        <li>Material Icon Theme</li>
+        <li>Color Highlight</li>
+        <li>Live Server</li>
+        <li>Path Intelliense</li>
+        <li>Prettier - Code Formatter</li>
+        <li>Spanish Languaje Pack For VS Code</li>
+    </ul>
+    <h3>Paso dos: Instalar WSL - Ubuntu</h3>
+    <ul>
+        <li>Abrir una ventana de powershell en modo administrador</li>
+        <li>Instala WSL con el siguiente comando // wsl --install //</li>
+        <li>Al finalizar la instalación pedirá reiniciar sistema</li>
+        <li>Una vez reiniciado Ubuntu se ejecuta automaticamente y se instala</li>
+        <li>Una vez instalado pedirá que ingreses usuario y despues contraseña (serán los datos de admin)</li>
+    </ul>
+    <p>Para abrir el explorador de archivos usa el comando // explorer.exe . //</p>
+    <p>Para trabajar con derechos de administrador usar el comando // sudo //</p>
+    <p>Comando para dar permisos de acceso a una carpeta // sudo chown -R nombreUsuario ~/nombreCarpeta // ejemplo; sudo chown -R panjimavi ~/cursos //</p>
+    <p>Algunos comandos utlizados:</p>
+    <ul>
+        <li>pwd // Para ver en que carpeta estamos</li>
+        <li>cd // Para navegar através de las carpetas</li>
+        <li>cd ~ // Para ir a la carpeta principal (panjimavi)</li>
+        <li>ls // Muestra los archivos que tenemos en la carpeta</li>
+        <li>ls -a // muestras los archivos ocultos</li>
+        <li>clear // Limpia la consola</li>
+        <li>cd .. // Para ir a la carpeta anterior</li>
+        <li>mkdir // Para crear una carpeta</li>
+        <li>rmdir // Para eliminar carpetas vacías</li>
+        <li>touch // para crear un archivo</li>
+        <li>rm -rf // para borrar una carpeta y los archivos que contenga</li>
+        <li>cp // Se usa para copiar un archivo o carpeta</li>
+        <li>mv // Se usa para mover un archivo o carpeta</li>
+    </ul>
+    <h4>Cuando termines de programar... No olvides apagar la terminal de ubuntu; Abra una ventana de comando (No linux) y escriba el siguiente comando // wsl --shutdown //</h4>
+    <h3>Paso tres: Instalar Node.js</h3>
+    <p>Para instalar la última version dde nodejs y npm, ejecute en la terminal de ubuntu los siguientes comandos</p>
+    <ol>
+        <li>sudo apt-get update</li>
+        <li>sudo apt-get upgrade</li>
+        <li>sudo apt-get install -y nodejs</li>
+        <li>sudo apt-get install npm</li>
+        <li>sudo apt-get update</li>
+        <li>sudo npm install -g n</li>
+        <li>sudo n latest</li>
+        <li>npm -v</li>
+        <li>node -v</li>
+    </ol>
+    <h3>Paso cuatro: Instalar Git</h3>
+    <p>Para instalar git, ejecute en la terminal de ubuntu los siguientes comandos</p>
+    <ol>
+        <li>git --version</li>
+        <li>sudo apt-get update</li>
+        <li>sudo apt-get upgrade</li>
+        <li>sudo apt-get install git</li>
+        <li>sudo add-apt-repository ppa:git-core/ppa</li>
+        <li>git config --global user.name "panjimavi"</li>
+        <li>git config --global user.email "fjja86@gmail.com"</li>
+        <li>sudo apt-get update</li>
+        <li>sudo apt-get install git</li>
+        <li>git --version</li>
+    </ol>
+    <h3>Paso cinco: Vincular una llave SSH en Github</h3>
+    <p>Para vincular una llave SSH a Github, ejecute en la terminal de ubuntu los siguientes comandos</p>
+    <ol>
+        <li>ssh-keygen -t rsa -b 4096 -C "fjja86@gmail.com"</li>
+        <li>eval "$(ssh-agent -s)"</li>
+        <li>cd ~/.ssh</li>
+        <li>cat id_rsa.pub</li>
+    </ol>
+    <p>Copia el codigo que arroja y pegalo en la pagina de github, en el apartado SSH and GPG keys</p>
+    <h3>Paso seis: subir un repositorio</h3>
+    <p>Primero debes crear un repositorio en Github con el mismo nombre de la carpeta donde estan tus archivos</p>
+    <p>Luego ejecuta en la terminal de ubuntu los siguientes comandos</p>
+    <ol>
+        <li>echo "# cursoPrework" >> README.md</li>
+        <li>git init</li>
+        <li>git add .</li>
+        <li>git commit -m "first commit"</li>
+        <li>git branch -M main</li>
+        <li>git remote add origin git@github.com:panjimavi/cursoPrework.git</li>
+        <li>git push -u origin main</li>
+    </ol>
+    <p>Realizar prueba: edita cualquier cosa en VS, guardalo y realiza la actualización ejecutando en la terminal de ubuntu los siguientes comandos</p>
+    <ol>
+        <li>git add .</li>
+        <li>git commit -m "prueba de cambios"</li>
+        <li>git push -u origin main</li>
+    </ol>
+    <h4>Soy la prueba del cambio xD</h4>
+</body>
+</html>
